@@ -1,0 +1,47 @@
+<Project>
+  <!-- Common properties for all plugin projects in Ufex.Extensions.Audio -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Company>Ufex</Company>
+    <Product>Universal File Explorer</Product>
+    <Copyright>Copyright (C) Ed Potocko 2005 - 2026</Copyright>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <!-- Common project reference to Ufex.API -->
+  <ItemGroup>
+    <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\..\src\Ufex.API\Ufex.API.csproj" />
+  </ItemGroup>
+
+  <!-- Output all plugins to the build staging directory -->
+  <PropertyGroup>
+    <PluginOutputDir>$(MSBuildThisFileDirectory)..\..\..\.\build\$(Configuration)\$(TargetFramework)\plugins\</PluginOutputDir>
+    <ConfigOutputDir>$(MSBuildThisFileDirectory)..\..\..\.\build\$(Configuration)\$(TargetFramework)\config\</ConfigOutputDir>
+  </PropertyGroup>
+
+  <!-- Copy plugin DLL and dependencies to the build/plugins directory after build -->
+  <Target Name="CopyPluginToOutput" AfterTargets="Build">
+    <MakeDir Directories="$(PluginOutputDir)" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(PluginOutputDir)" SkipUnchangedFiles="true" />
+    <ItemGroup>
+      <_PluginDepsFiles Include="$(TargetDir)$(AssemblyName).deps.json" />
+      <_PluginRefAssemblies Include="@(ReferenceCopyLocalPaths)" Condition="'%(ReferenceCopyLocalPaths.Extension)' == '.dll' and '%(Filename)' != 'Ufex.API'" />
+      <_PluginExtraFiles Include="$(TargetDir)*.onnx;$(TargetDir)*.onnx.data" />
+    </ItemGroup>
+    <Copy SourceFiles="@(_PluginDepsFiles)" DestinationFolder="$(PluginOutputDir)" SkipUnchangedFiles="true" Condition="'@(_PluginDepsFiles)' != ''" />
+    <Copy SourceFiles="@(_PluginRefAssemblies)" DestinationFolder="$(PluginOutputDir)" SkipUnchangedFiles="true" Condition="'@(_PluginRefAssemblies)' != ''" />
+    <Copy SourceFiles="@(_PluginExtraFiles)" DestinationFolder="$(PluginOutputDir)" SkipUnchangedFiles="true" Condition="'@(_PluginExtraFiles)' != ''" />
+  </Target>
+
+  <!-- Copy config files to the build/config directory -->
+  <Target Name="CopyConfigToOutput" AfterTargets="Build">
+    <ItemGroup>
+      <ConfigFiles Include="$(MSBuildThisFileDirectory)..\config\*.xml" />
+    </ItemGroup>
+    <MakeDir Directories="$(ConfigOutputDir)" Condition="'@(ConfigFiles)' != ''" />
+    <Copy SourceFiles="@(ConfigFiles)" DestinationFolder="$(ConfigOutputDir)" SkipUnchangedFiles="true" Condition="'@(ConfigFiles)' != ''" />
+  </Target>
+</Project>
+

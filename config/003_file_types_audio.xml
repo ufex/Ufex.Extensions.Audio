@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ufex xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<FileTypeClasses>
+		<FileTypeClass>
+			<ID>FTMD_MIDI</ID>
+			<AssemblyPath>Ufex.Extensions.Audio.MIDI.dll</AssemblyPath>
+			<FullTypeName>Ufex.Extensions.Audio.MIDI.MidiFileType</FullTypeName>
+			<FileTypes>
+				<ID>AUDIO_MIDI</ID>
+			</FileTypes>
+		</FileTypeClass>
+	</FileTypeClasses>
+</Ufex>
+

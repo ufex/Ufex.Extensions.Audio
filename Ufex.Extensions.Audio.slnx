@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/MIDI/">
+    <Project Path="src/MIDI/Ufex.Extensions.Audio.MIDI.csproj" />
+  </Folder>
+  <Project Path="../../src/Ufex.API/Ufex.API.csproj" />
+</Solution>
+

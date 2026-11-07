@@ -13,7 +13,7 @@ internal class SectionNode : TreeNode
 {
 	public Section Section { get; }
 
-	public override Visual[] Visuals => [new DataGridVisual(TableData(), "Data")];
+	public override Ufex.API.Visual.Visual[] Visuals => [new DataGridVisual(TableData(), "Data")];
 
 	protected SectionNode(Section section, String text, TreeViewIcon icon)
 		: base(text, icon, icon)

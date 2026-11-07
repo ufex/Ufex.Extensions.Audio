@@ -3,7 +3,7 @@
   <PropertyGroup>
     <RootNamespace>Ufex.Extensions.Audio.MIDI</RootNamespace>
     <AssemblyName>Ufex.Extensions.Audio.MIDI</AssemblyName>
-    <Version>1.0.0</Version>
+    <Version>2.3.0</Version>
     <RepositoryUrl>https://github.com/Ufex/Ufex.Extensions.Audio</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
   </PropertyGroup>

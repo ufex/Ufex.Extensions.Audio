@@ -1,7 +1,13 @@
 <Solution>
   <Folder Name="/src/" />
+  <Folder Name="/src/FLAC/">
+    <Project Path="src/FLAC/Ufex.Extensions.Audio.FLAC.csproj" />
+  </Folder>
   <Folder Name="/src/MIDI/">
     <Project Path="src/MIDI/Ufex.Extensions.Audio.MIDI.csproj" />
+  </Folder>
+  <Folder Name="/tests/FLAC.Tests/">
+    <Project Path="tests/FLAC.Tests/Ufex.Extensions.Audio.FLAC.Tests.csproj" />
   </Folder>
   <Project Path="../../src/Ufex.API/Ufex.API.csproj" />
 </Solution>

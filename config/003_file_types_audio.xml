@@ -2,6 +2,14 @@
 <Ufex xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<FileTypeClasses>
 		<FileTypeClass>
+			<ID>FTMD_FLAC</ID>
+			<AssemblyPath>Ufex.Extensions.Audio.FLAC.dll</AssemblyPath>
+			<FullTypeName>Ufex.Extensions.Audio.FLAC.FlacFileType</FullTypeName>
+			<FileTypes>
+				<ID>AUDIO_FLAC</ID>
+			</FileTypes>
+		</FileTypeClass>
+		<FileTypeClass>
 			<ID>FTMD_MIDI</ID>
 			<AssemblyPath>Ufex.Extensions.Audio.MIDI.dll</AssemblyPath>
 			<FullTypeName>Ufex.Extensions.Audio.MIDI.MidiFileType</FullTypeName>

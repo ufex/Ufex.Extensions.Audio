@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Ufex.Extensions.Audio.FLAC</RootNamespace>
+    <AssemblyName>Ufex.Extensions.Audio.FLAC</AssemblyName>
+    <Version>2.3.0</Version>
+    <RepositoryUrl>https://github.com/Ufex/Ufex.Extensions.Audio</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+</Project>

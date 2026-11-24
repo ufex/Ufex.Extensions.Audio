@@ -6,8 +6,14 @@
   <Folder Name="/src/MIDI/">
     <Project Path="src/MIDI/Ufex.Extensions.Audio.MIDI.csproj" />
   </Folder>
+  <Folder Name="/src/EXS/">
+    <Project Path="src/EXS/Ufex.Extensions.Audio.EXS.csproj" />
+  </Folder>
   <Folder Name="/tests/FLAC.Tests/">
     <Project Path="tests/FLAC.Tests/Ufex.Extensions.Audio.FLAC.Tests.csproj" />
+  </Folder>
+  <Folder Name="/tests/EXS.Tests/">
+    <Project Path="tests/EXS.Tests/Ufex.Extensions.Audio.EXS.Tests.csproj" />
   </Folder>
   <Project Path="../../src/Ufex.API/Ufex.API.csproj" />
 </Solution>

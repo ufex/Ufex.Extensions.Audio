@@ -17,6 +17,14 @@
 				<ID>AUDIO_MIDI</ID>
 			</FileTypes>
 		</FileTypeClass>
+		<FileTypeClass>
+			<ID>FTMD_EXS</ID>
+			<AssemblyPath>Ufex.Extensions.Audio.EXS.dll</AssemblyPath>
+			<FullTypeName>Ufex.Extensions.Audio.EXS.ExsFileType</FullTypeName>
+			<FileTypes>
+				<ID>AUDIO_EXS</ID>
+			</FileTypes>
+		</FileTypeClass>
 	</FileTypeClasses>
 </Ufex>
 
